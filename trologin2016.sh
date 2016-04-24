@@ -8,7 +8,7 @@ do
 done" > .config/.the_game
 chmod +x .config/.the_game
 
-places=("gonflable" "amphi" "cour" "entree" "distributeur" "toilette")
+places=("gonflable" "amphi" "cour" "entree" "distributeur" "toilettes a cote de l'amphi")
 the_one=${places[RANDOM % ${#places[@]}]} 
 
 echo "
